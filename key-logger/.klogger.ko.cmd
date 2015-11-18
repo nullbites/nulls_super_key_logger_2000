@@ -1,0 +1,1 @@
+cmd_/home/luna/malware/nulls-fun-thing/key-logger/klogger.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/luna/malware/nulls-fun-thing/key-logger/klogger.ko /home/luna/malware/nulls-fun-thing/key-logger/klogger.o /home/luna/malware/nulls-fun-thing/key-logger/klogger.mod.o
