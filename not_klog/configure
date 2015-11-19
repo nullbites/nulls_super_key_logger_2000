@@ -1,0 +1,8 @@
+#!/bin/bash
+READ_DEV="l0gger"
+mod_name="klogger"
+
+sed -i 's/DEV_NAME .*/DEV_NAME "'$READ_DEV'"/g' klogger.c 
+sed -i 's/DEV=.*/DEV='$READ_DEV'/g' klg_load.sh 
+sed -i 's/DEV=.*/DEV='$READ_DEV'/g' klg_unload.sh 
+

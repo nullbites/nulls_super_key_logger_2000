@@ -2,7 +2,7 @@
 
 RMMOD=`which rmmod`
 MODULE=klogger
-DEV=klg
+DEV=l0gger
 
 echo "Removing module .."
 $RMMOD $MODULE.ko || exit 1
