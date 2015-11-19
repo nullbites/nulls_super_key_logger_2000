@@ -1,1 +1,0 @@
-cmd_/home/luna/src/nulls_super_key_logger_2000/key-logger/klogger.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/luna/src/nulls_super_key_logger_2000/key-logger/klogger.ko /home/luna/src/nulls_super_key_logger_2000/key-logger/klogger.o /home/luna/src/nulls_super_key_logger_2000/key-logger/klogger.mod.o

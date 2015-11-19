@@ -1,8 +1,8 @@
-cmd_/home/luna/src/nulls_super_key_logger_2000/not_klog/klogger.o := gcc -Wp,-MD,/home/luna/src/nulls_super_key_logger_2000/not_klog/.klogger.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-unknown-linux-gnu/5.2.0/include -I./arch/x86/include -Iarch/x86/include/generated/uapi -Iarch/x86/include/generated  -Iinclude -I./arch/x86/include/uapi -Iarch/x86/include/generated/uapi -I./include/uapi -Iinclude/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_FXSAVEQ=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_CRC32=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fno-delete-null-pointer-checks -O2 --param=allow-store-data-races=0 -Wframe-larger-than=2048 -fstack-protector-strong -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -DCC_HAVE_ASM_GOTO  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(klogger)"  -D"KBUILD_MODNAME=KBUILD_STR(klogger)" -c -o /home/luna/src/nulls_super_key_logger_2000/not_klog/.tmp_klogger.o /home/luna/src/nulls_super_key_logger_2000/not_klog/klogger.c
+cmd_/home/luna/src/nulls_super_key_logger_2000/nulls_super_key_logger_2000/klogger.o := gcc -Wp,-MD,/home/luna/src/nulls_super_key_logger_2000/nulls_super_key_logger_2000/.klogger.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-unknown-linux-gnu/5.2.0/include -I./arch/x86/include -Iarch/x86/include/generated/uapi -Iarch/x86/include/generated  -Iinclude -I./arch/x86/include/uapi -Iarch/x86/include/generated/uapi -I./include/uapi -Iinclude/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_FXSAVEQ=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_CRC32=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fno-delete-null-pointer-checks -O2 --param=allow-store-data-races=0 -Wframe-larger-than=2048 -fstack-protector-strong -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -DCC_HAVE_ASM_GOTO  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(klogger)"  -D"KBUILD_MODNAME=KBUILD_STR(klogger)" -c -o /home/luna/src/nulls_super_key_logger_2000/nulls_super_key_logger_2000/.tmp_klogger.o /home/luna/src/nulls_super_key_logger_2000/nulls_super_key_logger_2000/klogger.c
 
-source_/home/luna/src/nulls_super_key_logger_2000/not_klog/klogger.o := /home/luna/src/nulls_super_key_logger_2000/not_klog/klogger.c
+source_/home/luna/src/nulls_super_key_logger_2000/nulls_super_key_logger_2000/klogger.o := /home/luna/src/nulls_super_key_logger_2000/nulls_super_key_logger_2000/klogger.c
 
-deps_/home/luna/src/nulls_super_key_logger_2000/not_klog/klogger.o := \
+deps_/home/luna/src/nulls_super_key_logger_2000/nulls_super_key_logger_2000/klogger.o := \
   include/linux/kernel.h \
     $(wildcard include/config/lbdaf.h) \
     $(wildcard include/config/preempt/voluntary.h) \
@@ -253,7 +253,7 @@ deps_/home/luna/src/nulls_super_key_logger_2000/not_klog/klogger.o := \
   include/linux/lockdep.h \
     $(wildcard include/config/lockdep.h) \
     $(wildcard include/config/lock/stat.h) \
-  /home/luna/src/nulls_super_key_logger_2000/not_klog/klogger.h \
+  /home/luna/src/nulls_super_key_logger_2000/nulls_super_key_logger_2000/klogger.h \
   include/linux/fs.h \
     $(wildcard include/config/sysfs.h) \
     $(wildcard include/config/fs/posix/acl.h) \
@@ -672,6 +672,6 @@ deps_/home/luna/src/nulls_super_key_logger_2000/not_klog/klogger.o := \
   include/linux/uuid.h \
   include/uapi/linux/uuid.h \
 
-/home/luna/src/nulls_super_key_logger_2000/not_klog/klogger.o: $(deps_/home/luna/src/nulls_super_key_logger_2000/not_klog/klogger.o)
+/home/luna/src/nulls_super_key_logger_2000/nulls_super_key_logger_2000/klogger.o: $(deps_/home/luna/src/nulls_super_key_logger_2000/nulls_super_key_logger_2000/klogger.o)
 
-$(deps_/home/luna/src/nulls_super_key_logger_2000/not_klog/klogger.o):
+$(deps_/home/luna/src/nulls_super_key_logger_2000/nulls_super_key_logger_2000/klogger.o):
