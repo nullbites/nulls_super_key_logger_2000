@@ -1,26 +1,23 @@
-The zip is the unmolested version.
+The zip is the unmolested version taken from source forge
 
 But that's no fun. 
 
-The install script has never been run. I wrote it up as 
-border-line pseudo-code for if we try and do this thing correctly.
-It should be fairly un-intuitive though.
-Also, I'm going to work on geetting everything varaible-ized
-So it can be modified on the fly quickly (like the install dir
-and w/e)
-
-I've alse added some silencing statements to the klogger.c
-file itself. Up top there should be a:
+I've alse added some silencing statements to klogger.c
+Up top there should be a:
 
 #define LOUD 0;
 
 statment. If you set this to "1" it will print debug info to
 the syslog
 
-This might be a good time to write a configuration file:
+TODO:
+1) configuration file:
 The config'll write all the var names to what they need to be across 
 all the scripts.
 
-I'm rambling.
+2) generate a rc.S script for loading 
+3) make a systemd module
+4) automatically (make install) install the .ko in /kernel/drivers/ and depmod
+
 
 Email me with questions!
